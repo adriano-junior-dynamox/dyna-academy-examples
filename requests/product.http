@@ -1,4 +1,7 @@
-### Cadastro de Produto
+@productId = 
+
+
+# Criar produto
 POST http://localhost:3000/v1/products
 Content-Type: application/json
 
@@ -8,12 +11,72 @@ Content-Type: application/json
   "price": 99.90
 }
 
-### Cadastro de Usuário (ajustar conforme necessário)
-POST http://localhost:3000/v1/users
+# Listar todos os produtos
+GET http://localhost:3000/v1/products
+
+# Buscar produto por ID
+GET http://localhost:3000/v1/products/{{productId}}
+
+# Atualizar produto
+PUT http://localhost:3000/v1/products/{{productId}}
 Content-Type: application/json
 
 {
-  "name": "Usuário Teste",
-  "email": "teste@exemplo.com",
-  "password": "senha123"
+  "name": "Produto Atualizado",
+  "price": 150.00
 }
+
+# Deletar produto
+DELETE http://localhost:3000/v1/products/{{productId}}
+
+
+### ------------ Exemplos de Requisições Inválidas ------------ ###
+
+# Criar produto sem nome
+POST http://localhost:3000/v1/products
+Content-Type: application/json
+{
+  "description": "Produto sem nome",
+  "price": 10
+}
+
+# Criar produto sem price
+POST http://localhost:3000/v1/products
+Content-Type: application/json
+{
+  "name": "Produto sem preço"
+}
+
+# Criar produto com price inválido
+POST http://localhost:3000/v1/products
+Content-Type: application/json
+{
+  "name": "Produto preço string",
+  "price": "dez"
+}
+
+# Buscar produto com ID inexistente
+GET http://localhost:3000/v1/products/naoexisteid
+
+# Atualizar produto com ID inexistente
+PUT http://localhost:3000/v1/products/naoexisteid
+Content-Type: application/json
+{
+  "name": "Novo Nome"
+}
+
+# Atualizar produto sem nenhum campo
+PUT http://localhost:3000/v1/products/{{productId}}
+Content-Type: application/json
+{
+}
+
+# Atualizar produto com price inválido
+PUT http://localhost:3000/v1/products/{{productId}}
+Content-Type: application/json
+{
+  "price": "cem"
+}
+
+# Deletar produto com ID inexistente
+DELETE http://localhost:3000/v1/products/naoexisteid
