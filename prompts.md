@@ -5,12 +5,13 @@ Analise a codebase deste projeto.
 
 Por favor, detalhe:
 
-A arquitetura utilizada (ex: camadas, padrões, frameworks)
-Principais tecnologias e dependências
-Pontos fortes e possíveis fragilidades da estrutura
-Sugestões de melhoria, boas práticas e refatorações
-Se possível, destaque módulos ou componentes críticos
-Comente sobre a organização dos arquivos e a legibilidade do código
+- A arquitetura utilizada (ex: camadas, padrões, frameworks)
+- Principais tecnologias e dependências
+- Pontos fortes e possíveis fragilidades da estrutura
+- Sugestões de melhoria, boas práticas e refatorações
+- Se possível, destaque módulos ou componentes críticos
+- Comente sobre a organização dos arquivos e a legibilidade do código
+ 
 Caso necessário, navegue pelos arquivos do projeto para embasar sua análise. Se precisar de contexto adicional, peça informações específicas.
 ```
 
