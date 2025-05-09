@@ -1,0 +1,1 @@
+export class UserV1ValidationError extends Error {}
