@@ -1,6 +1,6 @@
-import { UsersV1DatabaseRepository } from "../../database-repository";
+import type { UsersV1DatabaseRepository } from "../../database-repository";
 import { UserV1Entity } from "../../entity";
-import { ICreateUserDto } from "./dto";
+import type { ICreateUserDto } from "./dto";
 import { CreateUserV1NotAllowedError, InvalidRole } from "./errors";
 
 export class CreateUserV1UseCase {
@@ -22,6 +22,7 @@ export class CreateUserV1UseCase {
       id
     })
 
-    this.usersV1DatabaseRepository.create(userV1Entity.getDto())
+    console.log('DEBUG - DTO a ser salvo:', userV1Entity.getDto());
+    return this.usersV1DatabaseRepository.create(userV1Entity.getDto())
   }
 }

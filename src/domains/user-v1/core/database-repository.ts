@@ -1,4 +1,4 @@
-import { IUserV1Dto } from "./entity";
+import type { IUserV1Dto } from "./entity";
 
 export abstract class UsersV1DatabaseRepository {
    abstract create(inputDto: IUserV1Dto): Promise<IUserV1Dto>;

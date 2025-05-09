@@ -1,0 +1,19 @@
+### Cadastro de Produto
+POST http://localhost:3000/v1/products
+Content-Type: application/json
+
+{
+  "name": "Produto Teste",
+  "description": "Descrição do produto de teste",
+  "price": 99.90
+}
+
+### Cadastro de Usuário (ajustar conforme necessário)
+POST http://localhost:3000/v1/users
+Content-Type: application/json
+
+{
+  "name": "Usuário Teste",
+  "email": "teste@exemplo.com",
+  "password": "senha123"
+}
