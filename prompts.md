@@ -1,4 +1,4 @@
-### PROMPT DE NOVA ROTA NO SERVIÇO DE EXEMPLO
+#### PROMPT DE NOVA ROTA NO SERVIÇO DE EXEMPLO
 
 ```markdown
 Quero gerar uma nova versão da rota de produtos para esta codebase, seguindo boas práticas de arquitetura e organização. Por favor, considere os seguintes pontos ao gerar o código:
@@ -11,6 +11,11 @@ Quero gerar uma nova versão da rota de produtos para esta codebase, seguindo bo
 - Assegure tratamento adequado de erros, retornando status HTTP apropriados e mensagens informativas.
 - Mantenha o código compatível com TypeScript, usando tipagem explícita para parâmetros e retornos.
 - Os endpoints devem ser implementados em adapters/routes/product-routes.ts.
+```
+#### Para testar a rota de /users
+
+```markdown
+Gere testes automatizados para os endpoints da rota de usuários (/users), cobrindo casos de sucesso, falhas de validação e erros de servidor. Utilize o framework Jest com Supertest e siga a estrutura dos testes já utilizados para a rota de products.
 ```
 
 🧠 ChatGPT: Documentação, Explicações Técnicas e Exemplos
