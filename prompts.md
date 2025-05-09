@@ -1,4 +1,20 @@
-#### PROMPT DE NOVA ROTA NO SERVIÇO DE EXEMPLO
+#### Prompt para entender a codebase
+
+```markdown
+Analise a codebase deste projeto.
+
+Por favor, detalhe:
+
+A arquitetura utilizada (ex: camadas, padrões, frameworks)
+Principais tecnologias e dependências
+Pontos fortes e possíveis fragilidades da estrutura
+Sugestões de melhoria, boas práticas e refatorações
+Se possível, destaque módulos ou componentes críticos
+Comente sobre a organização dos arquivos e a legibilidade do código
+Caso necessário, navegue pelos arquivos do projeto para embasar sua análise. Se precisar de contexto adicional, peça informações específicas.
+```
+
+#### Prompt de nova rota no serviço de exemplo
 
 ```markdown
 Quero gerar uma nova versão da rota de produtos para esta codebase, seguindo boas práticas de arquitetura e organização. Por favor, considere os seguintes pontos ao gerar o código:
