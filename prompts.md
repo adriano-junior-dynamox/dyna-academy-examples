@@ -85,26 +85,6 @@ Execute o processo de build do projeto. Caso ocorram erros, identifique as causa
 Realize uma requisição para o endpoint /api/usuarios e verifique se a resposta está conforme o esperado. Caso contrário, identifique o erro e proponha uma solução.
 ```
 
-🗂️ Windsurf: Configurações de Contexto Global e Local
-Contexto Global (aplicável a todos os projetos):
-
-```json
-{
-  "linguagem": "TypeScript",
-  "framework": "NestJS",
-  "padrõesDeCódigo": "Utilizar arquitetura limpa, injeção de dependência e tratamento centralizado de erros.",
-  "convenções": "Nomenclatura camelCase para variáveis e PascalCase para classes."
-}
-```
-Contexto Local (específico de um projeto):
-
-```json
-{
-  "módulos": ["Autenticação", "Gerenciamento de Usuários", "Relatórios"],
-  "dependências": ["TypeORM", "JWT", "Swagger"],
-  "configuraçõesEspecíficas": "Endpoints devem seguir o padrão RESTful e incluir versionamento na URL."
-}
-```
 🎧 NotebookLM: Criação de Modelos de Áudio
 1. Gerar resumo em formato de podcast:
 
