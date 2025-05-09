@@ -6,7 +6,8 @@
     "dev": "ts-node src/server.ts",
     "start": "node dist/server.js",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectOpenHandles",
+    "test:products": "jest src/domains/product-v1/product-routes.test.ts --detectOpenHandles"
   },
   "author": "",
   "license": "ISC",
