@@ -3,7 +3,6 @@ import { JsonFileProductRepository } from '../database-repository-jsonfile';
 const repository = new JsonFileProductRepository();
 const router = express.Router();
 
-// Listar todos os produtos
 router.get('/', async (req: Request, res: Response) => {
   try {
     const products = await repository.findAll();
@@ -13,7 +12,6 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
-// Buscar produto por ID
 router.get('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -24,7 +22,6 @@ router.get('/:id', async (req: Request, res: Response) => {
   }
 });
 
-// Criar produto
 router.post('/', async (req: Request, res: Response) => {
   try {
     const { name, description, price } = req.body;
@@ -38,7 +35,6 @@ router.post('/', async (req: Request, res: Response) => {
   }
 });
 
-// Atualizar produto
 router.put('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -56,7 +52,6 @@ router.put('/:id', async (req: Request, res: Response) => {
   }
 });
 
-// Deletar produto
 router.delete('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
