@@ -101,20 +101,41 @@ A API estará disponível em: http://localhost:3000
   ```
 
 ### Produtos
-- **Listar produtos:**
-  ```http
-  GET http://localhost:3000/v1/products
-  ```
 - **Criar produto:**
   ```http
   POST http://localhost:3000/v1/products
   Content-Type: application/json
   {
     "name": "Produto Teste",
-    "description": "Descrição do produto",
-    "price": 99.99
+    "description": "Descrição do produto de teste",
+    "price": 99.90
   }
   ```
+- **Listar todos:**
+  ```http
+  GET http://localhost:3000/v1/products
+  ```
+- **Buscar por ID:**
+  ```http
+  GET http://localhost:3000/v1/products/{productId}
+  ```
+- **Atualizar produto:**
+  ```http
+  PUT http://localhost:3000/v1/products/{productId}
+  Content-Type: application/json
+  {
+    "name": "Produto Atualizado",
+    "price": 150.00
+  }
+  ```
+- **Deletar produto:**
+  ```http
+  DELETE http://localhost:3000/v1/products/{productId}
+  ```
+
+#### Testes e exemplos
+- Use o arquivo [`requests/product.http`](./requests/product.http) para testar todos os fluxos, incluindo casos inválidos (campos obrigatórios, tipos errados, IDs inexistentes, etc).
+- As respostas e validações seguem o mesmo padrão robusto do domínio de usuários.
 
 ## Testes de payloads e erros
 
