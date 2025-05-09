@@ -1,0 +1,147 @@
+@userId = 
+
+
+# Listar Usuários
+GET http://localhost:3000/v1/users
+
+# Buscar Usuário por ID
+GET http://localhost:3000/v1/users/{{userId}}
+
+# Criar Usuário
+POST http://localhost:3000/v1/users
+Content-Type: application/json
+
+{
+  "creatorRole": "admin",
+  "userData": {
+    "name": "Usuário Teste",
+    "email": "teste@exemplo.com"
+  }
+}
+
+# Atualizar Usuário
+PUT http://localhost:3000/v1/users/{{userId}}
+Content-Type: application/json
+
+{
+  "creatorRole": "admin",
+  "userData": {
+    "name": "Usuário Atualizado",
+    "email": "atualizado@exemplo.com"
+  }
+}
+
+# Deletar Usuário
+DELETE http://localhost:3000/v1/users/{{userId}}
+
+
+### ------------ Exemplos de Requisições Inválidas ------------ ###
+
+# Criar usuário sem creatorRole
+POST http://localhost:3000/v1/users
+Content-Type: application/json
+
+{
+  "userData": {
+    "name": "Usuário Inválido",
+    "email": "invalido@exemplo.com"
+  }
+}
+
+# Criar usuário com creatorRole diferente de admin
+POST http://localhost:3000/v1/users
+Content-Type: application/json
+
+{
+  "creatorRole": "user",
+  "userData": {
+    "name": "Usuário Inválido",
+    "email": "invalido@exemplo.com"
+  }
+}
+
+# Criar usuário sem name
+POST http://localhost:3000/v1/users
+Content-Type: application/json
+
+{
+  "creatorRole": "admin",
+  "userData": {
+    "email": "invalido@exemplo.com"
+  }
+}
+
+# Criar usuário sem email
+POST http://localhost:3000/v1/users
+Content-Type: application/json
+
+{
+  "creatorRole": "admin",
+  "userData": {
+    "name": "Usuário Inválido"
+  }
+}
+
+# Atualizar usuário com ID inexistente
+PUT http://localhost:3000/v1/users/usuario-inexistente
+Content-Type: application/json
+
+{
+  "creatorRole": "admin",
+  "userData": {
+    "name": "Novo Nome",
+    "email": "novoemail@exemplo.com"
+  }
+}
+
+# Deletar usuário com ID inexistente
+DELETE http://localhost:3000/v1/users/usuario-inexistente
+
+# Atualizar usuário sem creatorRole
+PUT http://localhost:3000/v1/users/{{userId}}
+Content-Type: application/json
+
+{
+  "userData": {
+    "name": "Novo Nome",
+    "email": "novoemail@exemplo.com"
+  }
+}
+
+# Atualizar usuário com creatorRole diferente de admin
+PUT http://localhost:3000/v1/users/{{userId}}
+Content-Type: application/json
+
+{
+  "creatorRole": "user",
+  "userData": {
+    "name": "Novo Nome",
+    "email": "novoemail@exemplo.com"
+  }
+}
+
+# Atualizar usuário sem name
+PUT http://localhost:3000/v1/users/{{userId}}
+Content-Type: application/json
+
+{
+  "creatorRole": "admin",
+  "userData": {
+    "email": "novoemail@exemplo.com"
+  }
+}
+
+# Atualizar usuário sem email
+PUT http://localhost:3000/v1/users/{{userId}}
+Content-Type: application/json
+
+{
+  "creatorRole": "admin",
+  "userData": {
+    "name": "Novo Nome"
+  }
+}
+
+# Deletar usuário com ID malformado
+DELETE http://localhost:3000/v1/users/!@#erro-id
+

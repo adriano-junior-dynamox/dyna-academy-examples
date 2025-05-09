@@ -14,6 +14,14 @@ export class MongoDbUsersV1DatabaseRepository implements UsersV1DatabaseReposito
     throw Error('Not implemented')
   }
 
+  update(id: string, inputDto: Partial<IUserV1Dto>): Promise<IUserV1Dto> {
+    throw Error('Not implemented')
+  }
+
+  delete(id: string): Promise<void> {
+    throw Error('Not implemented')
+  }
+
   generateUniqueId(): string {
     throw Error('Not implemented')
   }

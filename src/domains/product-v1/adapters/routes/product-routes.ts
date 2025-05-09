@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express, { type Request, type Response } from 'express';
 import { InMemoryProductRepository } from '../database-repository-memory';
 import { createProduct } from '../../core/use-cases/create-product';
 

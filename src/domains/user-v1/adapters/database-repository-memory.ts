@@ -20,6 +20,19 @@ export class InMemoryUsersV1DatabaseRepository implements UsersV1DatabaseReposit
     return user;
   }
 
+  async update(id: string, inputDto: Partial<IUserV1Dto>): Promise<IUserV1Dto> {
+    const index = this.users.findIndex(u => u.id === id);
+    if (index === -1) throw new Error('User not found');
+    this.users[index] = { ...this.users[index], ...inputDto };
+    return this.users[index];
+  }
+
+  async delete(id: string): Promise<void> {
+    const index = this.users.findIndex(u => u.id === id);
+    if (index === -1) throw new Error('User not found');
+    this.users.splice(index, 1);
+  }
+
   generateUniqueId(): string {
     return String(this.nextId++);
   }
